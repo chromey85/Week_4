@@ -23,13 +23,21 @@ class Cars{
             return this._paid;
         }
     };
+
+class carReg extends Cars {
+    constructor(carReg, departure){
+        super(carReg);
+        this._departureTime = departure;
+    }
+
     calculateCost() {
         return (departure - this.arrive) * this.hCost;
-    };
+    }
     
-    makePayment(amountPaid) {
-        if (amountPaid >= this.calculateCost){
+    makePayment() {
+        if (this.amountPaid >= this.calculateCost){
             console.log("Parking fee has been paid")
                 } else {
                     console.log("parking fee needs to be paid")}
     }
+}
