@@ -52,4 +52,4 @@ class Cars{
 
 const carReg = new Cars("SD04LNC")
 
-console.log(`${hours*1.5}`)
+console.log(carReg.hours*1.5)
