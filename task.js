@@ -31,4 +31,25 @@ let rosie = {
 }
 
 console.log(rosie.name);
-console.log(rosie.drink);
+console.log(rosie.thirst);
+
+class Cars{
+    constructor(carReg) {
+        this. _carReg = carReg;
+        this. _timeHours = 2;
+        this. _timeMins = 0;
+    }
+    get carReg() {
+        return this._carReg;
+    }
+    get hours() {
+        return this._timeHours;
+    }
+    get mins() {
+        return this._timeMins;
+    }
+}
+
+const carReg = new Cars("SD04LNC")
+
+console.log(`${hours*1.5}`)
