@@ -34,44 +34,47 @@
 // let arrive = 800;
 // let departure = 1200;
 
-class Cars{
-        constructor(carReg, arrive) {
-            this._carReg = carReg;
-            this._arrive = arrive;
-            this._hCost = 1.50;
-            // this._paid = amountPaid;
-        }
-        get carReg() {
-            return this._carReg;
-        }
-        get arrive() {
-            return this._arrive;
-        }
-        get hCost() {
-            return this._hCost;
-        }
-        // get amountPaid() {
-        //     return this._paid;
-        // }
-    };
+class Car {
+    constructor(carReg, arrive) {
+        this._carReg = carReg;
+        this._arrive = arrive;
+        this._hCost = 1.50;
+        // this._paid = amountPaid;
+    }
+    get carReg() {
+        return this._carReg;
+    }
+    get arrive() {
+        return this._arrive;
+    }
+    get hCost() {
+        return this._hCost;
+    }
+    // get amountPaid() {
+    //     return this._paid;
+    // }
+};
 
-class Out extends Cars {
-    constructor(carReg, departure){
+class StaffCar extends Car {
+    constructor(carReg, departure, staffId, credit) {
         super(carReg);
         this._departureTime = departure;
+        this._staffId = staffId;
+        this._credit = credit;
     }
 };
 
 let calculateCost = (arrive, departure) => {
-    return (departure - arrive) * hCost;
+    return (departure - arrive) * this.hCost;
 }
 
-let makePayment = (amountPaid, calculateCost) => {
-        if (amountPaid >= calculateCost){
-            console.log("Parking fee has been paid")
-                } else {
-                    console.log("parking fee needs to be paid")
-                }
+
+let makePayment = (amountPaid) => {
+    if (amountPaid >= calculateCost) {
+        console.log("Parking fee has been paid")
+    } else {
+        console.log("parking fee needs to be paid")
+    }
 }
 
 // console.log(carReg);
@@ -79,7 +82,8 @@ let makePayment = (amountPaid, calculateCost) => {
 // console.log(arrive);
 // console.log(departure);
 
-const UAZ7149 = new Cars("UAZ7149", arrive, calculateCost);
+const UAZ7149 = new Car("UAZ7149", 0700)
+const lizCar = new StaffCar("UAZ7149", 1200, 12345, 6)
 
-UAZ7149.calculateCost();
+console.log(makePayment(10));
 
