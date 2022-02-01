@@ -162,3 +162,21 @@
 // }
 
 // const rosie = new Bunny("Rosie", true, ["basil", "rocket", "broccoli"]);
+
+// let stringLet = "let string"; 
+// let stringVar = "var string"; 
+
+// const newString = () => { 
+//     let stringLet = "new let string"; 
+//     var stringVar = "new var string"; 
+//     console.log(`Inside function: ${stringLet}`); //new 
+//     console.log(`Inside function: ${stringVar}`); //new 
+// } 
+
+// newString(); 
+// console.log(stringLet); //old 
+// console.log(stringVar); //old
+
+// //*Variable declared inside the function will exist inside the function only.
+
+

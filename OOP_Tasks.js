@@ -55,35 +55,67 @@ class Car {
     // }
 };
 
-class StaffCar extends Car {
-    constructor(carReg, departure, staffId, credit) {
-        super(carReg);
-        this._departureTime = departure;
-        this._staffId = staffId;
-        this._credit = credit;
-    }
-};
+// class StaffCar extends Car {
+//     constructor(carReg, departure, staffId, credit) {
+//         super(carReg);
+//         this._departureTime = departure;
+//         this._staffId = staffId;
+//         this._credit = credit;
+//     }
+// };
 
-let calculateCost = (arrive, departure) => {
-    return (departure - arrive) * this.hCost;
-}
+// let calculateCost = (arrive, departure) => {
+//     return (departure - arrive) * this.hCost;
+// }
 
+// let makePayment = (amountPaid) => {
+//     if (amountPaid >= calculateCost) {
+//         console.log("Parking fee has been paid")
+//     } else {
+//         console.log("parking fee needs to be paid")
+//     }
+// }
 
-let makePayment = (amountPaid) => {
-    if (amountPaid >= calculateCost) {
-        console.log("Parking fee has been paid")
-    } else {
-        console.log("parking fee needs to be paid")
-    }
-}
+// const UAZ7149 = new Car("UAZ7149", 0700)
+// const lizCar = new StaffCar("UAZ7149", 1200, 12345, 6)
 
 // console.log(carReg);
 // console.log(amountPaid);
 // console.log(arrive);
 // console.log(departure);
 
-const UAZ7149 = new Car("UAZ7149", 0700)
-const lizCar = new StaffCar("UAZ7149", 1200, 12345, 6)
+// const bootCamp = () => {
+//     console.log("This bootcamp is a challenge")
+// }
 
-console.log(makePayment(10));
+// const func = (fn) => {
+//     for (i = 0; i < 5; i++){
+//         fn();
+//     }
+// }
 
+// func(bootCamp);
+
+let d = 15;
+let m = 03;
+let y = 1985;
+// let f = 0;
+// let l = 0;
+// let s = 0;
+
+if (m < 3){
+    m = m + 12;
+    y = y - 1;
+}
+
+let f = Math.floor(y / 100);
+let l = y - (100 * f);
+
+let s = Math.floor((2.6 * m) - 5.39) + Math.floor(f / 4) + d + l - (2 * f);
+let x = s - (7 * Math.floor(s / 7));
+
+console.log(x);
+
+let daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+console.log(daysOfWeek[`${x-1}`]);
