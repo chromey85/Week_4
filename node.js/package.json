@@ -1,0 +1,26 @@
+{
+  "name": "week_4",
+  "version": "1.0.0",
+  "main": "OOP_Tasks.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chromey85/Week_4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chromey85/Week_4/issues"
+  },
+  "homepage": "https://github.com/chromey85/Week_4#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7"
+  },
+  "description": ""
+}
